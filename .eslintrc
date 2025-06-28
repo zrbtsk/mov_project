@@ -1,0 +1,60 @@
+{
+    "root": true,
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react-hooks/recommended"
+    ],
+    "ignorePatterns":[ "dist", ".eslintrc" ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": "latest",
+        "ecmaFeatures": {
+            "jsx": true // JSX-compatible
+        }
+    },
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "react",
+        "react-refresh"
+    ],
+    "rules": {
+        "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "react-refresh/only-export-components": [
+          "warn",
+          {"allowConstantExport": true}
+        ],  
+        "semi": [
+            "error",
+            "always"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "indent": "off",
+        "no-fallthrough": "off", // disallow fallthrough of case statements
+        "no-multiple-empty-lines": [
+            1,
+            {
+                "max": 2
+            }
+        ], // disallow multiple empty lines (off by default)
+        "no-nested-ternary": 1, // disallow nested ternary expressions (off by default)
+        "eqeqeq": 2, // require the use of === and !==
+        "react/prop-types": "off" // Prevent missing props validation in a React component definition
+    },
+    "settings": {
+        "react": {
+            "version": "detect" // Tell eslint-plugin-react to automatically detect the latest version of react.
+        }
+    }
+}
