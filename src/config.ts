@@ -22,4 +22,4 @@ export const searchAll = axios.create({
  * Возвращает расширенную информацию о конкретном фильме
  */
 export const searchById = (id: string) =>
-  `http://www.omdbapi.com/?apikey=${API_KEY_OMDb}&i=` + id;
+  `https://www.omdbapi.com/?apikey=${API_KEY_OMDb}&i=` + id;
