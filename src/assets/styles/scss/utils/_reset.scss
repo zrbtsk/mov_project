@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-size: 10px;
+  font-family: $mainFont;
+  color: var(--colors-primary-text);
+  background-color: var(--colors-bg-main);
+  transition: background-color 0.2s, color 0.3s;
+}
+
+h1,
+h2,
+h3,
+p {
+  font-family: $mainFont;
+}
+

@@ -1,0 +1,84 @@
+.header__listItem {
+  @media ($tablet) {
+    position: relative;
+    list-style-type: none;
+
+    .movies__content,
+    .serials__content,
+    .cartoons__content {
+      @include dropdownContent();
+    }
+
+    .movies__content {
+      top: 100%;
+      left: -165.45px;
+    }
+    .serials__content {
+      top: 100%;
+      left: -249.45px;
+    }
+    .cartoons__content {
+      top: 100%;
+      left: -327.18px;
+    }
+
+    .movies__content__text,
+    .serials__content__text,
+    .cartoons__content__text {
+      font-size: 2rem;
+      font-family: $h2;
+      color: var(--colors-primary-text);
+    }
+
+    &.movies:hover .movies__content,
+    &.serials:hover .serials__content,
+    &.cartoons:hover .cartoons__content {
+      display: flex;
+      justify-content: flex-start;
+      gap: 30px;
+      visibility: visible;
+      opacity: 1;
+      -webkit-animation: content-FadeIn 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        forwards;
+              animation: content-FadeIn 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        forwards;
+      pointer-events: auto;
+    }
+
+    &:not(:hover) .movies__content,
+    &:not(:hover) .serials__content,
+    &:not(:hover) .cartoons__content {
+      -webkit-animation: none;
+              animation: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
+    }
+
+    @-webkit-keyframes content-FadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes content-FadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}
+.genre {
+  height: 190px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0px 30px;
+  flex-wrap: wrap;
+}

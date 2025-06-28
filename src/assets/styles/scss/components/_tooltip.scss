@@ -1,0 +1,53 @@
+.react-tooltip {
+  font-family: $mainFont;
+  padding: 6px 10px;
+  font-size: 1.4rem !important;
+  background: var(--colors-text) !important;
+  border-radius: 10px !important;
+  z-index: 1000;
+
+  &.place-top {
+    margin-bottom: 10px;
+  }
+}
+#email-tooltip {
+  font-family: $mainFont;
+  background: var(--colors-text) !important;
+  color: var(--colors-bg-main);
+  top: 120px !important;
+  left: 100px !important;
+}
+
+#password-tooltip {
+  font-family: $mainFont;
+  background: var(--colors-text) !important;
+  color: var(--colors-bg-main);
+  top: 198px !important;
+  left: 100px !important;
+}
+#mbRegister-tooltip {
+  font-family: 'avenir_light', arial;
+  background-color: var(--colors-text) !important;
+  color: var(--colors-bg-main);
+  width: 160px;
+  height: 70px;
+  font-size: 1.6rem;
+  border-radius: 50px !important;
+  padding: 18px 21px;
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  left: 220px !important;
+  top: -30px !important;
+  @media ($tablet) {
+    left: 255px !important;
+    top: -30px !important;
+    width: 201px;
+  }
+}
+#favourite-tooltip,
+#trash-tooltip {
+  font-family: $mainFont;
+  background: var(--colors-text) !important;
+  color: var(--colors-bg-main);
+}

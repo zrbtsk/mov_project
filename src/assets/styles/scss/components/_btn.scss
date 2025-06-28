@@ -1,0 +1,29 @@
+.btn {
+   @include btn();
+   transition: transform 0.1s ease;
+   margin-right: auto;
+}
+.btn:hover {
+transform: scale(0.92);
+box-shadow: none;
+}
+.icon_back {
+    margin-right: 5px;
+}
+.pagination {
+    width: clamp(262px, calc(86.1vw - 13.5px), 1226px);;
+    height: 35px;
+    color: var(--colors-primary-text);
+    font-family: $mainFont;
+    background-color:  var(--colors-bg-main);
+    border-radius: 15px;
+    border: 1px solid var(--colors-primary-text);
+    padding: 5px 12px;
+    margin: 20px auto;
+    margin-bottom: 20px;
+}
+.pagination:hover {
+    background-color:  var(--colors-bg-filter);
+    border: none;
+    box-shadow: none;
+}

@@ -1,0 +1,33 @@
+.footer {
+ width: 100%;
+  padding-left: clamp(
+    12px,
+    calc(12px + (70 - 12) * (100vw - 320px) / (1024 - 320)),
+    70px
+  );
+  padding-right: clamp(
+    12px,
+    calc(12px + (70 - 12) * (100vw - 320px) / (1024 - 320)),
+    70px
+  );
+  height: 120px;
+  &__message {
+    padding: 15px 20px;
+    display: flex;
+    gap: 20px;
+
+    &__vk,
+    &__facebook,
+    &__linkedin {
+        background-color: var(--colors-btn-select-hov);
+        border-radius: 35%;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+    }
+  }
+  &__data {
+    font-size: 1.4rem;
+    padding: 0px 20px;
+  }
+}

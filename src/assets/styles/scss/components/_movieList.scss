@@ -1,0 +1,10 @@
+.movieList {
+    display: grid;
+    gap: 16px 24px;
+    place-content: center center;
+    grid-template-columns: repeat(auto-fit, 128px);
+    margin: 24px 0px;
+        @media ($mobil) {
+    grid-template-columns: repeat(auto-fit, 155px);
+    }
+}

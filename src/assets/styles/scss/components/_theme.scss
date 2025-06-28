@@ -1,0 +1,30 @@
+
+.theme {
+  font-size: 1.6rem;
+  width: 20px;
+  height: 20px;
+  position: relative;
+    display: block;
+  @media ($laptop) {
+    width: 109px;
+    height: 40px;
+  }
+}
+.theme__icon {
+  position: absolute;
+top: 0;
+
+  @media ($laptop) {
+    top: 11px;
+  }
+}
+.theme__text {
+  color: var(--colors-primary-text); 
+  position: absolute;
+  top: 10.3px;
+  right: 5px;
+  display: none;
+  @media ($laptop) {
+    display: block;
+  }
+}

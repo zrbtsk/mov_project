@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es2015",
+     "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+    },
+    
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "types": ["jest", "node", "redux", "react-redux", "vite/client"]
+  },
+  "include": ["src", "**/*.test.ts", "**/*.test.tsx"], 
+  "exclude": ["node_modules", "webpack.*.js", "*.config.js"]
+}

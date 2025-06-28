@@ -1,0 +1,28 @@
+.headerBar {
+margin: 20px 0px;
+
+&__title {
+    @include h1();
+    margin-top: 0px;
+}
+&__p {
+@include p1(var(--colors-text));
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
+  transition: all 0.3s ease;
+}
+&__expanded {
+@include p1(var(--colors-text));
+  -webkit-line-clamp: unset; 
+}
+&__btn {
+@include p1();
+cursor: pointer;
+}
+}
+.search__h1 {
+    @include h1();
+    color: var(--colors-text);
+}

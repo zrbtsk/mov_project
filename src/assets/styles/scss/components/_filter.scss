@@ -1,0 +1,409 @@
+.filter {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: wrap;
+  margin: 20px auto;
+  background-color: var(--colors-bg-filter);
+  border-radius: 35px;
+  align-content: flex-start;
+  box-shadow: var(--shadow);
+  padding: 18px 20px;
+  gap: 12px;
+  width: 262px;
+  height: 404px;
+  transition: width 0.3s ease, height 0.3s ease;
+
+  @media ($tablet) {
+    width: 492px;
+    height: 214px;
+    margin: 20px auto;
+  }
+  @media (min-width: 1080px) {
+    width: 956px;
+    height: 146px;
+    margin: 20px auto;
+  }
+
+  &__genre,
+  &__countries,
+  &__years,
+  &__rating {
+    @include filterItem();
+  }
+
+  &__subscription,
+  &__free {
+    width: 131px;
+    height: 35px;
+  }
+}
+.otherFilters {
+  width: 222px;
+  height: 96px;
+  transition: width 0.3s ease, height 0.3s ease;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  gap: 12px 12px;
+  color: var(--colors-primary-text);
+
+  &__subscription {
+    @include otherFilters();
+    padding: 11px 20.1px;
+  }
+  &__free {
+    @include otherFilters(90px, 42px);
+    padding: 11.2px 23.2px;
+  }
+  &__resetFilters {
+    font-family: $mainFont;
+    font-size: 1.6rem;
+    color: var(--colors-text);
+    width: 100px;
+    height: 40px;
+    position: relative;
+    margin-left: auto;
+    padding-top: 20px;
+    &:hover {
+      color: var(--colors-primary-text);
+    }
+  }
+  @media ($tablet) {
+    width: 452px;
+    height: 42px;
+  }
+  @media (min-width: 1080px) {
+    width: 916px;
+    height: 42px;
+  }
+}
+.otherFilters__subscription__text,
+.otherFilters__free__text,
+.otherFilters__resetFilters__text {
+  position: absolute;
+}
+.filter__reting__icon,
+.otherFilters__subscription__icons,
+.otherFilters__free__icons,
+.otherFilters__resetFilters__icons {
+  margin-right: 5px;
+}
+
+.filter__genre__content {
+  padding: 16px;
+}
+.filter__genre__control:hover {
+  background-color: var(--colors-btn-select-hov);
+  -webkit-animation: scal 0.1s both;
+          animation: scal 0.1s both;
+}
+.filter__countries__control:hover {
+  background-color: var(--colors-btn-select-hov);
+  -webkit-animation: scal 0.1s both;
+          animation: scal 0.1s both;
+}
+.filter__rating__control:hover {
+  background-color: var(--colors-btn-select-hov);
+  -webkit-animation: scal 0.1s both;
+          animation: scal 0.1s both;
+}
+.otherFilters__subscription:active {
+  background-color: var(--colors-btn-select-hov);
+  border: none;
+}
+.otherFilters__free:active {
+  background-color: var(--colors-btn-select-hov);
+  border: none;
+}
+
+@-webkit-keyframes scal {
+  0% {
+    transform: scale(1);
+    transform-origin: 50% 100%;
+  }
+  100% {
+    transform: scale(1.04);
+    transform-origin: 50% 100%;
+  }
+}
+
+@keyframes scal {
+  0% {
+    transform: scale(1);
+    transform-origin: 50% 100%;
+  }
+  100% {
+    transform: scale(1.04);
+    transform-origin: 50% 100%;
+  }
+}
+.filter__genre__control,
+.filter__countries__control {
+  width: 220px;
+  height: 56px;
+  background-color: var(--colors-btn-select);
+  border-radius: 15px;
+  cursor: pointer;
+  align-items: end !important;
+  padding: 6.5px 16px;
+  color: var(--colors-text) !important;
+  font-size: 1.4rem !important;
+}
+.filter__genre__menu,
+.filter__countries__menu {
+  position: absolute;
+  top: 60px !important;
+  background: var(--colors-btn-select);
+  border-radius: 15px;
+  z-index: 9999;
+  width: 220px;
+  overflow: hidden;
+}
+.filter__genre__menu-list,
+.filter__countries__menu-list {
+  padding: 0;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.filter__genre__option,
+.filter__countries__option {
+  padding: 12px 16px !important;
+  color: var(--colors-primary-text);
+  cursor: pointer;
+}
+
+.filter__genre__singleValue {
+  color: var(--colors-text) !important;
+  font-size: 1.4rem !important;
+}
+
+.filter__genre__option--is-focused,
+.filter__countries__option--is-focused {
+  background-color: var(--colors-btn-select-hov) !important;
+}
+.filter__genre__option--is-selected,
+.filter__countries__option--is-selected {
+  background-color: var(--colors-btn-select-hov) !important;
+  order: -1 !important;
+}
+.filter__genre__option--is-focused .filter__genre__option__checkbox {
+  background-color: var(--colors-text);
+}
+.filter__countries__option--is-focused .filter__countries__option__checkbox {
+  background-color: var(--colors-text);
+}
+.filter__genre__text,
+.filter__countries__text,
+.filter__years__text,
+.filter__rating__text {
+  @include filtersText();
+  top: 18.3px;
+}
+.hasValue {
+  @include filtersText();
+  top: 9.5px;
+}
+.filter__genre__icon,
+.filter__countries__icon,
+.filter__years__icon,
+.filter__rating__icon {
+  @include filtersIcon();
+}
+.filter__genre__control--menu-is-open .filter__genre__icon {
+  transform: rotate(180deg);
+}
+.filter__countries__control--menu-is-open .filter__countries__icon {
+  transform: rotate(180deg);
+}
+
+.filter__genre__option__checkbox {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+  right: 16px;
+  width: 16px;
+  height: 16px;
+  background: var(--colors-btn-select);
+  border-radius: 50%;
+  border: 1.5px solid var(--colors-text);
+}
+.filter__countries__option__checkbox {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+  right: 16px;
+  width: 16px;
+  height: 16px;
+  background: var(--colors-btn-select);
+  border-radius: 50%;
+  border: 1.5px solid var(--colors-text);
+}
+
+.filter__genre__option__checkbox:checked {
+  background-color: var(--colors-text);
+}
+.filter__countries__option__checkbox:checked {
+  background-color: var(--colors-text);
+}
+.filter__genre__option__checkbox:disabled {
+  background-color: var(--colors-btn-select);
+  border-color: var(--colors-text);
+}
+.filter__countries__option__checkbox:disabled {
+  background-color: var(--colors-btn-select);
+  border-color: var(--colors-text);
+}
+.filter__genre__option__checkbox:disabled::after {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+.filter__countries__option__checkbox:disabled::after {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+.css-tj5bde-Svg {
+  display: none !important;
+}
+.filter__genre__multi-value {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+}
+.years,
+.rating {
+  position: relative;
+  list-style-type: none;
+}
+.filter__years__menu,
+.filter__rating__menu {
+  position: absolute;
+  top: 60px;
+  background: var(--colors-btn-select);
+  color: var(--colors-text);
+  font-size: 1.6rem;
+  border-radius: 15px;
+  z-index: 9999;
+  width: 220px;
+  height: 130px;
+  gap: 8px 11px;
+  grid-template-areas:
+    'from to'
+    'fromInput toInput'
+    'btnReset btnDone';
+  padding: 13px;
+  justify-content: center;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.filter__years__menu--visible,
+.filter__rating__menu--visible {
+  display: grid;
+  opacity: 1;
+  visibility: visible;
+}
+.filter__years,
+.filter__rating {
+  &:hover {
+    background-color: var(--colors-btn-select-hov);
+    -webkit-animation: scal 0.1s both;
+            animation: scal 0.1s both;
+  }
+}
+.filter__rating__icon--rotated,
+.filter__years__icon--rotated {
+  transform: rotate(180deg);
+}
+
+.filter__years__menu__input--from,
+.filter__years__menu__input--to,
+.filter__rating__menu__input--from,
+.filter__rating__menu__input--to {
+  background-color: var(--colors-btn-select);
+  border: 1px solid var(--colors-text);
+  border-radius: 11px;
+  width: 85px;
+  height: 30px;
+  padding: 0px 7px;
+}
+.filter__years__menu__btn--done,
+.filter__rating__menu__btn--done {
+  background-color: var(--colors-btn-select-hov);
+  color: var(--colors-primary-text);
+  padding: 7px 25px;
+  height: 35px;
+  border-radius: 11px;
+  font-size: 1.6rem;
+  grid-area: btnDone;
+  &:hover {
+    background-color: var(--colors-bg-filter);
+  }
+}
+.filter__years__menu__btn--reset,
+.filter__rating__menu__btn--reset {
+  background-color: var(--colors-btn-select-hov);
+  color: var(--colors-primary-text);
+  padding: 7px 25px;
+  height: 35px;
+  border-radius: 11px;
+  font-size: 1.6rem;
+  grid-area: btnReset;
+  &:hover {
+    background-color: var(--colors-bg-filter);
+  }
+}
+.filter__years__menu__input--to,
+.filter__rating__menu__input--to {
+  grid-area: toInput;
+  outline: none;
+  font-family: $mainFont;
+  color: var(--colors-primary-text);
+}
+.filter__years__menu__input--from,
+.filter__rating__menu__input--from {
+  grid-area: fromInput;
+  font-family: $mainFont;
+  color: var(--colors-primary-text);
+  outline: none;
+}
+.filter__years__menu__input--from::-webkit-input-placeholder, .filter__rating__menu__input--from::-webkit-input-placeholder, .filter__years__menu__input--to::-webkit-input-placeholder, .filter__rating__menu__input--to::-webkit-input-placeholder {
+  font-family: $mainFont;
+  color: var(--colors-text);
+}
+.filter__years__menu__input--from::-moz-placeholder, .filter__rating__menu__input--from::-moz-placeholder, .filter__years__menu__input--to::-moz-placeholder, .filter__rating__menu__input--to::-moz-placeholder {
+  font-family: $mainFont;
+  color: var(--colors-text);
+}
+.filter__years__menu__input--from:-ms-input-placeholder, .filter__rating__menu__input--from:-ms-input-placeholder, .filter__years__menu__input--to:-ms-input-placeholder, .filter__rating__menu__input--to:-ms-input-placeholder {
+  font-family: $mainFont;
+  color: var(--colors-text);
+}
+.filter__years__menu__input--from::-ms-input-placeholder, .filter__rating__menu__input--from::-ms-input-placeholder, .filter__years__menu__input--to::-ms-input-placeholder, .filter__rating__menu__input--to::-ms-input-placeholder {
+  font-family: $mainFont;
+  color: var(--colors-text);
+}
+.filter__years__menu__input--from::placeholder,
+.filter__rating__menu__input--from::placeholder,
+.filter__years__menu__input--to::placeholder,
+.filter__rating__menu__input--to::placeholder {
+  font-family: $mainFont;
+  color: var(--colors-text);
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.filter__years__label,
+.filter__rating__label {
+  font-size: 1.4rem;
+  color: var(--colors-text);
+  position: absolute;
+  top: 33px;
+  left: 15px;
+}

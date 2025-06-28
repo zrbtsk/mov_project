@@ -1,0 +1,26 @@
+
+.loader {
+    width: 120px;
+    height: 22px;
+    border-radius: 20px;
+    color: var(--colors-text);
+    border: 2px solid;
+    position: relative;
+    margin: 20% auto;
+  }
+  .loader::before {
+    content: "";
+    position: absolute;
+    margin: 2px;
+    inset: 0 100% 0 0;
+    border-radius: inherit;
+    background: currentColor;
+    -webkit-animation: l6 2s infinite;
+            animation: l6 2s infinite;
+  }
+  @-webkit-keyframes l6 {
+      100% {inset:0}
+  }
+  @keyframes l6 {
+      100% {inset:0}
+  }

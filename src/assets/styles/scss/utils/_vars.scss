@@ -1,0 +1,34 @@
+//font
+
+$mainFont: 'avenir_light', arial;
+$h1: 'avenir_black', arial;
+$h2: 'avenir_heavy', arial;
+$h3: 'avenir_roman', arial;
+
+//screens
+$mobil: 'min-width: 424px ';
+$tablet: 'min-width: 767px';
+$laptop: 'min-width: 1023px';
+
+//theme
+
+[data-theme='dark'] {
+  --colors-primary-text: #f9f9f9;
+  --colors-text: #c0c0c0;
+  --colors-bg-main: #242d36;
+  --colors-bg-filter: #2d3742;
+  --colors-btn-select: #404f5d;
+  --colors-btn-select-hov: #394553;
+  --colors-rating-text: #f9f9f9;
+  --shadow: rgb(20, 29, 38) 0px 0px 8px;
+}
+[data-theme='light'] {
+  --colors-primary-text: #573f39;
+  --colors-text: #846557;
+  --colors-bg-main: #e6e6de;
+  --colors-bg-filter: #dddad1;
+  --colors-btn-select: #d2cec5;
+  --colors-btn-select-hov: #b5b2ab;
+  --colors-rating-text: #e6e6de;
+  --shadow: rgb(57, 43, 40) 0px 0px 8px;
+}

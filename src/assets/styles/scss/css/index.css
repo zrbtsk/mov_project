@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "avenir_roman";
+  src: url("../../fonts/avenirltstd-roman-webfont.woff2") format("woff2"), url("../../fonts/avenirltstd-roman-webfont.woff") format("woff"), url("../../fonts/avenirltstd-roman-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "avenir_medium";
+  src: url("../../fonts/avenirltstd-medium-webfont.woff2") format("woff2"), url("../../fonts/avenirltstd-medium-webfont.woff") format("woff"), url("../../fonts/avenirltstd-medium-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "avenir_light";
+  src: url("../../fonts/avenirltstd-light-webfont.woff2") format("woff2"), url("../../fonts/avenirltstd-light-webfont.woff") format("woff"), url("../../fonts/avenirltstd-light-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "avenir_book";
+  src: url("../../fonts/avenirltstd-book-webfont.woff2") format("woff2"), url("../../fonts/avenirltstd-book-webfont.woff") format("woff"), url("../../fonts/avenirltstd-book-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "avenir_black";
+  src: url("../../fonts/avenirltstd-black-webfont.woff2") format("woff2"), url("../../fonts/avenirltstd-black-webfont.woff") format("woff"), url("../../fonts/avenirltstd-black-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "avenir_heavy";
+  src: url("../../fonts/avenirltstd-heavy-webfont.woff2") format("woff2"), url("../../fonts/avenirltstd-heavy-webfont.woff") format("woff"), url("../../fonts/avenirltstd-heavy-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+[data-theme=dark] {
+  --colors-primary-text: #f9f9f9;
+  --colors-text: #c0c0c0;
+  --colors-bg-main: #242d36;
+  --colors-bg-filter: #2d3742;
+  --colors-btn-select: #404f5d;
+  --colors-btn-select-hov: #394553;
+  --colors-rating-text: #f9f9f9;
+  --shadow: rgb(20, 29, 38) 0px 0px 8px;
+}
+
+[data-theme=light] {
+  --colors-primary-text: #573f39;
+  --colors-text: #846557;
+  --colors-bg-main: #e6e6de;
+  --colors-bg-filter: #dddad1;
+  --colors-btn-select: #d2cec5;
+  --colors-btn-select-hov: #b5b2ab;
+  --colors-rating-text: #e6e6de;
+  --shadow: rgb(57, 43, 40) 0px 0px 8px;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 10px;
+  font-family: "avenir_light", arial;
+  color: var(--colors-primary-text);
+  background-color: var(--colors-bg-main);
+  transition: background-color 0.2s, color 0.3s;
+}
+
+h1,
+h2,
+h3,
+p {
+  font-family: "avenir_light", arial;
+}

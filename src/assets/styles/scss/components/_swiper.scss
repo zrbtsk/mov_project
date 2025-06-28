@@ -1,0 +1,158 @@
+.customSwiper {
+  width: 100%;
+  position: relative;
+}
+.collectionSwiper {
+  overflow-y: hidden !important;
+  overflow-x: visible;
+}
+.collectionSwiper .swiper-wrapper {
+  margin-left: 20px;
+  align-items: flex-end;
+  height: 290px;
+  @media ($mobil) {
+    width: 155px;
+    height: 302px; //
+  }
+  @media ($tablet) {
+    margin-left: 0px;
+  }
+}
+.collectionSwiper .swiper-slide {
+  width: 128px;
+  height: auto;
+  min-height: 225px;
+  @media ($mobil) {
+    width: 155px;
+    height: 270px;
+  }
+}
+
+.collectionSwiper .customSwiper {
+  position: relative;
+  margin: 24px 0px;
+}
+.custom-prev-btn,
+.custom-next-btn {
+  display: none;
+  @media ($tablet) {
+    display: block;
+    position: absolute;
+    top: 43%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.custom-prev-btn {
+  @media ($tablet) {
+    left: -34px;
+  }
+}
+
+.custom-next-btn {
+  @media ($tablet) {
+    right: -34px;
+  }
+}
+
+/* Отключение кнопки, если слайдер в начале/конце */
+.custom-prev-btn.swiper-button-disabled,
+.custom-next-btn.swiper-button-disabled {
+  @media ($tablet) {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+.collections {
+  margin-bottom: 40px;
+}
+.collections__title {
+  @include h2();
+  margin-top: 20px;
+}
+.more-block {
+  width: 155px;
+  height: 235px;
+  box-shadow: var(--shadow);
+  border-radius: 15px;
+  background-color: var(--colors-btn-select);
+  font-size: 1.6rem;
+  font-family: 'avenir_roman', arial;
+  padding: 109px 37px;
+}
+.more-block:hover {
+  opacity: 0.3;
+  -webkit-animation: scal 0.1s both;
+          animation: scal 0.1s both;
+}
+.collections__h1 {
+  @include h1();
+}
+.homeSwiper {
+  margin: 40px auto;
+  width: clamp(
+    280px,
+    calc(280px + (760 - 280) * (100vw - 375px) / (1024 - 375)),
+    760px
+  );
+  height: clamp(
+    170px,
+    calc(170px + (441 - 170) * (100vw - 375px) / (1024 - 375)),
+    441px
+  );
+}
+.homeSwiper .swiper-button-next,
+.homeSwiper .swiper-button-prev {
+  display: none;
+}
+
+.homeSwiper__img {
+  border-radius: 15px;
+  width: clamp(
+    280px,
+    calc(280px + (760 - 280) * (100vw - 375px) / (1024 - 375)),
+    760px
+  );
+  height: auto;
+  border-radius: 15px;
+  border: 1px solid var(--colors-text);
+}
+.homeSwiper .swiper-slide {
+  width: clamp(
+    280px,
+    calc(280px + (760 - 280) * (100vw - 375px) / (1024 - 375)),
+    760px
+  ) !important;
+  height: auto;
+}
+
+.homeSwiper .swiper-pagination-bullet {
+  background: var(--colors-btn-select);
+  opacity: 1;
+}
+.homeSwiper .swiper-pagination-bullet-active {
+  background: var(--colors-text);
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--colors-bg-main);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Для Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--colors-bg-main) #f1f1f1;
+}
